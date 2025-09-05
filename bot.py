@@ -1,7 +1,6 @@
 import discord
 from discord.ext import commands
 from groq import Groq
-import keep_alive
 
 import os
 DISCORD_TOKEN = os.getenv("DISCORD_TOKEN")
