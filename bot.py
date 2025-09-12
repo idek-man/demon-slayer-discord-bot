@@ -19,6 +19,9 @@ conversation_history = {}
 async def on_ready():
     await bot.tree.sync()
     print(f"☀️ The Breath of the Sun awakens within {bot.user}")
+    @bot.event
+async def on_disconnect():
+    print("⚠️ Bot disconnected from Discord. Trying to reconnect...")
 
 @bot.tree.command(name="sun_breath", description="Channel the Breath of the Sun and seek guidance")
 async def sun_breath(interaction: discord.Interaction, question: str):
