@@ -101,4 +101,6 @@ async def ban(ctx, member: discord.Member):
     await member.ban(reason="Sealed by the Demon Slayer Bot")
     await ctx.send(f"🔨 {member} was struck down by the Demon Slayer’s judgment.")
 
-bot.run(DISCORD_TOKEN)
+if __name__ == "__main__":
+    bot.run(DISCORD_TOKEN)
+    
