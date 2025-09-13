@@ -1,14 +1,20 @@
-import os
+# keep_alive.py
 from flask import Flask
+import threading
+import os
+import bot  # Import your bot file (without running bot.run here!)
 
 app = Flask(__name__)
 
 @app.route("/")
-def root():
-    return "Bot is running!", 200
+def home():
+    return "☀️ Demon Slayer Bot is running!", 200
 
-import bot
-
-if __name__ == "__main__":
-    port = int(os.environ.get("PORT", 5000))  # 👈 must use $PORT
+def run():
+    port = int(os.environ.get("PORT", 10000))
     app.run(host="0.0.0.0", port=port)
+
+def keep_alive():
+    server = threading.Thread(target=run)
+    server.start()
+    
