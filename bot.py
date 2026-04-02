@@ -82,7 +82,7 @@ async def ask(ctx, *, question: str = None):
         await ctx.send(f"🔥 *The Hunter Association Guild Declares...*\n\n{bot_reply}")
 
     except Exception as e:
-        await ctx.send("⚠️ Even the Hashira are silent on this matter...")
+        await ctx.send("⚠️ Confidential, the Hunter Association cannot provide information to that...")
         print("---- ERROR ----")
         print(e)
 
